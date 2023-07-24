@@ -2,10 +2,14 @@ from langchain.llms import LlamaCpp
 from langchain import PromptTemplate, LLMChain
 from langchain.callbacks.manager import CallbackManager
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
+from third_party.linkedin import scrape_linkedin_profile
 
-information = """
-Elon Reeve Musk is a business magnate and investor. 
-"""
+import json
+
+# TODO: hotfix
+def limit(j):
+    my_str = json.dumps(j)[:50]
+    return my_str
 
 if __name__ == "__main__":
     print("Hello Langchain")
@@ -27,4 +31,6 @@ if __name__ == "__main__":
     )
 
     chain = LLMChain(llm=llm, prompt=summary_prompt_template)
-    print(chain.run(information=information))
+
+    information = scrape_linkedin_profile(linkedin_profile_url="")
+    print(chain.run(information=limit(information)))
