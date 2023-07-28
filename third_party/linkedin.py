@@ -14,14 +14,14 @@ def scrape_linkedin_profile(linkedin_profile_url: str):
     if response.status_code == 200:  # check if the request was successful
         data = response.json()
         data = {
-            k:v
-            for k,v in data.items()
+            k: v
+            for k, v in data.items()
             if v not in ([], "", "", None)
-                and k not in ["people_also_viewed", "certifications"] 
+            and k not in ["people_also_viewed", "certifications"]
         }
         if data.get("groups"):
             for group_dict in data.get("groups"):
-                    group_dict.pop("profile_pic_url")
+                group_dict.pop("profile_pic_url")
         return data
     else:
         print("Error fetching data")

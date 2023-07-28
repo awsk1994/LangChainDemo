@@ -9,6 +9,7 @@ requests = "*"
 black = "*"
 openai = "*"
 llama-cpp-python = "*"
+pydantic = "*"
 
 [dev-packages]
 
