@@ -4,6 +4,8 @@ https://github.com/emarco177/ice_breaker
 
 pdf langchain code: https://blog.nextideatech.com/chat-with-documents-using-langchain-gpt-4-python/
 
+## PDF CHATBOT
+ - problems: when asked "what track record do you have?", it starts to make things up. Not sure how to prevent it from making things up.
 
 ## Section 3
  - Chat Models

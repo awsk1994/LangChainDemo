@@ -28,9 +28,14 @@ retriever = vectordb.as_retriever()
 llm = ChatOpenAI(model_name='gpt-3.5-turbo', temperature=0, verbose=True)
 
 prompt_template = """
-You are a marketing expert in software solutions. 
-Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer.
-Your product is {context}
+You are a sales. 
+Treat the following context as the sole product you are selling.
+Use the following pieces of context to answer the question at the end. 
+If you don't know the answer, just say that you don't know, don't try to make up an answer.
+If you don't know the answer, just say that you don't know, don't try to make up an answer.
+If you don't know the answer, just say that you don't know, don't try to make up an answer.
+
+{context}
 
 Question: {question}
 """
