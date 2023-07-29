@@ -10,6 +10,10 @@ black = "*"
 openai = "*"
 llama-cpp-python = "*"
 pydantic = "*"
+fitz = "*"
+pymupdf = "*"
+chromadb = "*"
+tiktoken = "*"
 
 [dev-packages]
 
