@@ -2,6 +2,9 @@
 
 https://github.com/emarco177/ice_breaker
 
+pdf langchain code: https://blog.nextideatech.com/chat-with-documents-using-langchain-gpt-4-python/
+
+
 ## Section 3
  - Chat Models
  - Chains
